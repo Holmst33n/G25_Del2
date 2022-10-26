@@ -1,7 +1,5 @@
 package game.src;
 
-import java.sql.SQLOutput;
-
 public class DieCup {
 
     private int rollValue;
@@ -19,4 +17,8 @@ public class DieCup {
     public int getRollValue() {
         return rollValue;
     } // We get the total rollvalue
+
 }
+}
+
+
