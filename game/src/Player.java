@@ -6,7 +6,7 @@ public class Player {
     private boolean turnIndicator;
 
     public Player() {       //constructor
-        turnIndicator = false;
+        this.turnIndicator = false;
     }
 
     public int getBalance() {
@@ -17,16 +17,11 @@ public class Player {
         this.balance = balance;
     }
 
-    public void setTurnIndicator(int a) {       //sets turnIndicator to either true or false by setting a to 1 or 0
-        if(a == 1) {
-            turnIndicator = true;
-        }
-        else if (a == 0) {
-            turnIndicator = false;
-        }
+    public void setTurnIndicator(boolean turnIndicator) {       //sets turnIndicator to either true or false by setting a to 1 or 0
+        this.turnIndicator = turnIndicator;
     }
 
-    public boolean getTurnIndicator() {     //gets turnIndicator
+    public boolean isTurnIndicator() {     //gets turnIndicator
         return turnIndicator;
     }
 }
