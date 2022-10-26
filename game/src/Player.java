@@ -17,7 +17,7 @@ public class Player {
         this.balance = balance;
     }
 
-    public void setTurnIndicator(boolean turnIndicator) {       //sets turnIndicator to either true or false by setting a to 1 or 0
+    public void setTurnIndicator(boolean turnIndicator) {       //sets turnIndicator to either true or false
         this.turnIndicator = turnIndicator;
     }
 
