@@ -14,9 +14,9 @@ public class DieCup {
         Die.roll();
         this.rollValue = Die.getFaceValue();
         Die.roll();
-        this.rollValue = this.rollValue + Die.getFaceValue();
+        this.rollValue = this.rollValue + Die.getFaceValue(); // we plus the to dies together
 
     public int getRollValue() {
         return rollValue;
-    }
+    } // We get the total rollvalue
 }
