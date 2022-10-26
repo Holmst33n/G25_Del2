@@ -6,6 +6,7 @@ public class Die {
     //--------------------------------------------------------------------------------------
 
     private int faceValue; //The faceValue of the die.
+    final int MAX = 6; //Maximum faceValue on the die.
 
     //The constructor to initialize the face value.
     public Die() {
@@ -13,9 +14,8 @@ public class Die {
     }
 
     //Method that "rolls" the dice; returns a number (faceValue) between 1 and 6.
-    public static int roll() {
-        final int MAX = 6; //Maximum faceValue on the die.
-        int faceValue = (int)(Math.random()*MAX)+1;
+    public int roll() {
+        faceValue = (int)(Math.random()*MAX)+1;
 
         return faceValue;
     }
