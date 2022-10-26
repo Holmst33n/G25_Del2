@@ -9,10 +9,11 @@ public class DieCup {
     }
 
     public static void throwDice();
-        Die.roll();
-        this.rollValue = Die.getFaceValue();
-        Die.roll();
-        this.rollValue = this.rollValue + Die.getFaceValue(); // we plus the to dies together
+        Die die1 = new Die();
+        Die die2 = new Die();
+        Die1.roll();
+        Die2.roll();
+        this.rollValue = Die1.getFaceValue() + Die2.getFaceValue(); // we plus the to dies together
 
     public int getRollValue() {
         return rollValue;
