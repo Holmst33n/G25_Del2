@@ -4,13 +4,13 @@ public class Player {
 
     private int balance = 0;
 
-    public Player() {}
+    public Player() {}      //constructor
 
     public int getBalance() {
         return balance;
-    }
+    }       //getter
 
-    public void setBalance(int balance) {
+    public void setBalance(int balance) {       //setter
         this.balance = balance;
     }
 }
