@@ -46,7 +46,5 @@ public class Board {
         }
     }
 
-    public boolean isExtraTurn() {
-        return extraTurn;
-    }
+    public boolean isExtraTurn() {return extraTurn;}    //returns extraTurn, to check if the player has an extra turn
 }
