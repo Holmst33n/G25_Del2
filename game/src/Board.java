@@ -5,7 +5,7 @@ public class Board {
     private int throwResult;
     private boolean extraTurn = false;
 
-    public Board() {throwResult = 0;}
+    public Board() {throwResult = 0;}       //constructor
 
     public void playTurn() {
 
@@ -48,13 +48,13 @@ public class Board {
         }
     }
 
-    public int getThrowResult() {
+    public int getThrowResult() {       //gets throwResult
         return throwResult;
     }
 
     public boolean isExtraTurn() {return this.extraTurn;}    //returns extraTurn, to check if the player has an extra turn
 
-    public void setExtraTurn(boolean a) {
+    public void setExtraTurn(boolean a) {       //sets extraTurn
         this.extraTurn = a;
     }
 }
