@@ -6,18 +6,18 @@ public class Player {
 
     public Player() {       //constructor
         this.turnIndicator = false;
-        Account account = new Account();
     }
+    Account account = new Account();
 
     public int getBalance() {       //getter
         return account.getBalance();
     }
 
     public void setBalance(int balance) {       //setter
-        if(balance > 0){
+        if(balance < 0){
             account.withdraw(balance);
         }
-        else if(balance < 0){
+        else if(balance > 0){
             account.deposit(balance);
         }
     }
