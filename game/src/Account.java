@@ -27,6 +27,7 @@ public class Account {
     //  Withdraws the specified amount from the account. Returns the new balance.
     //-----------------------------------------------------------------
     public int withdraw (int amount) {
+
         balance = balance + amount;
         if (balance < 0) {
             balance = 0;
