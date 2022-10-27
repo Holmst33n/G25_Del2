@@ -5,46 +5,56 @@ public class Board {
     private int throwResult;
     private boolean extraTurn = false;
 
-    public Board() {}
+    public Board() {throwResult = 0;}       //constructor
 
-    public static void playTurn() {
+    public void playTurn() {
 
-        DieCup.throwDice();
-        if(DieCup.getRollValue() == 2){     //Tower
+        DieCup cup = new DieCup();
+
+        cup.throwDice();
+        if(cup.getRollValue() == 2){     //Tower
             this.throwResult = 250;
         }
-        else if(DieCup.getRollValue() == 3){    //Crater
+        else if(cup.getRollValue() == 3){    //Crater
             this.throwResult = -100;
         }
-        else if(DieCup.getRollValue() == 4){    //Palace Gates
+        else if(cup.getRollValue() == 4){    //Palace Gates
             this.throwResult = 100;
         }
-        else if(DieCup.getRollValue() == 5){    //Cold Deserts
+        else if(cup.getRollValue() == 5){    //Cold Deserts
             this.throwResult = -20;
         }
-        else if(DieCup.getRollValue() == 6){    //Walled City
+        else if(cup.getRollValue() == 6){    //Walled City
             this.throwResult = +180;
         }
-        else if(DieCup.getRollValue() == 7){    //Monastery
+        else if(cup.getRollValue() == 7){    //Monastery
             this.throwResult = 0;
         }
-        else if(DieCup.getRollValue() == 8){    //Black Cave
+        else if(cup.getRollValue() == 8){    //Black Cave
             this.throwResult = -70;
         }
-        else if(DieCup.getRollValue() == 9){    //Huts in the mountain
+        else if(cup.getRollValue() == 9){    //Huts in the mountain
             this.throwResult = +60;
         }
-        else if(DieCup.getRollValue() == 10){   //The Werewall (werewolf-wall)
+        else if(cup.getRollValue() == 10){   //The Werewall (werewolf-wall)
             this.throwResult = -80;
             this.extraTurn = true;
         }
-        else if(DieCup.getRollValue() == 11){   //The pit
+        else if(cup.getRollValue() == 11){   //The pit
             this.throwResult = -50;
         }
-        else if(DieCup.getRollValue() == 12){   //Goldmine
+        else if(cup.getRollValue() == 12){   //Goldmine
             this.throwResult = +650;
         }
     }
 
-    public boolean isExtraTurn() {return extraTurn;}    //returns extraTurn, to check if the player has an extra turn
+    public int getThrowResult() {       //gets throwResult
+        return throwResult;
+    }
+
+    public boolean isExtraTurn() {return this.extraTurn;}    //returns extraTurn, to check if the player has an extra turn
+
+    public void setExtraTurn(boolean a) {       //sets extraTurn
+        this.extraTurn = a;
+    }
 }
