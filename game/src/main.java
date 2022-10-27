@@ -13,12 +13,12 @@ public class main {
         System.out.println("Welcome to the game! Press Enter to play each turn.");
 
         do{         //this do while loop runs until a player hits 3000
-            turn = buffer.nextLine();
-            board.playTurn();
             if(player1.isTurnIndicator()){          //plays player1's turn
+                turn = buffer.nextLine();
+                board.playTurn();
                 player1.setBalance(board.getThrowResult());      //updates balance of player1
                 player1.setTurnIndicator(false);        //removes turnIndicator from player1
-                //System.out.println("Player1 has earned " + board.getThrowResult());
+
                 if(board.isExtraTurn()){        //checks if player1 has an extra turn
                     player1.setTurnIndicator(true);
                     System.out.println("Player1 has earned an extra turn!");
@@ -36,12 +36,12 @@ public class main {
                 }
             }
 
-            turn = buffer.nextLine();
-            board.playTurn();
             if(player2.isTurnIndicator()){          //plays player2's turn
+                turn = buffer.nextLine();
+                board.playTurn();
                 player2.setBalance(board.getThrowResult());      //updates balance of player2
                 player2.setTurnIndicator(false);        //removes turnIndicator from player2
-                //System.out.println("Player2 has earned " + board.getThrowResult());
+
                 if(board.isExtraTurn()){        //checks if player2 has an extra turn
                     player2.setTurnIndicator(true);
                     System.out.println("Player2 has earned an extra turn!");
