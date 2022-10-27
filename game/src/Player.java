@@ -2,19 +2,19 @@ package game.src;
 
 public class Player {
 
-    private int balance = 0;
     private boolean turnIndicator;
 
     public Player() {       //constructor
         this.turnIndicator = false;
+        Account account = new Account();
     }
 
-    public int getBalance() {
-        return balance;
-    }       //getter
+    public int getBalance() {       //getter
+        return account.getBalance();
+    }
 
     public void setBalance(int balance) {       //setter
-        this.balance = balance;
+        account.setBalance(balance);
     }
 
     public void setTurnIndicator(boolean turnIndicator) {       //sets turnIndicator to either true or false
