@@ -14,7 +14,12 @@ public class Player {
     }
 
     public void setBalance(int balance) {       //setter
-        account.setBalance(balance);
+        if(balance > 0){
+            account.withdraw(balance);
+        }
+        else if(balance < 0){
+            account.deposit(balance);
+        }
     }
 
     public void setTurnIndicator(boolean turnIndicator) {       //sets turnIndicator to either true or false
