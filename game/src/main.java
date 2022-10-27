@@ -28,6 +28,9 @@ public class main {
                     player2.setTurnIndicator(true);     //hands over the turn to player2
                 }
                 System.out.println("Player1 balance: " + player1.getBalance());
+                if(player1.getBalance() > 3000){        //checks if player 1 has won, then breaks out of do while
+                    break;
+                }
             }
 
             turn = buffer.nextLine();
@@ -45,6 +48,9 @@ public class main {
                     player1.setTurnIndicator(true);     //hands over the turn to player1
                 }
                 System.out.println("Player2 balance: " + player2.getBalance());
+                if(player2.getBalance() > 3000){        //checks if player 2 has won, then breaks out of do while
+                    break;
+                }
             }
         }while(player1.getBalance() < 3000 && player2.getBalance() < 3000);
 
