@@ -14,10 +14,10 @@ public class Player {
     }
 
     public void setBalance(int balance) {       //setter
-        if(balance > 0){
+        if(balance < 0){
             account.withdraw(balance);
         }
-        else if(balance < 0){
+        else if(balance > 0){
             account.deposit(balance);
         }
     }
