@@ -2,20 +2,24 @@ package game.src;
 
 public class Player {
 
-    private int balance;
     private boolean turnIndicator;
 
     public Player() {       //constructor
         this.turnIndicator = false;
-        this.balance = 0;
+        Account account = new Account();
     }
 
-    public int getBalance() {
-        return balance;
-    }       //getter
+    public int getBalance() {       //getter
+        return account.getBalance();
+    }
 
     public void setBalance(int balance) {       //setter
-        this.balance = balance;
+        if(balance > 0){
+            account.withdraw(balance);
+        }
+        else if(balance < 0){
+            account.deposit(balance);
+        }
     }
 
     public void setTurnIndicator(boolean turnIndicator) {       //sets turnIndicator to either true or false
