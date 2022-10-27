@@ -12,7 +12,7 @@ public class main {
         String turn;
         System.out.println("Welcome to the game! Press Enter to play each turn.");
 
-        do{         //this do while loop runs until a player hits 3000
+        do{         //this do while loop runs until a player hits 3000 coins
             if(player1.isTurnIndicator()){          //plays player1's turn
                 turn = buffer.nextLine();
                 board.playTurn();
