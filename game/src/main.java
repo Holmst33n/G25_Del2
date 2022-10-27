@@ -16,9 +16,9 @@ public class main {
             turn = buffer.nextLine();
             board.playTurn();
             if(player1.isTurnIndicator()){          //plays player1's turn
-                player1.setBalance(player1.getBalance() + board.getThrowResult());      //updates balance of player1
+                player1.setBalance(board.getThrowResult());      //updates balance of player1
                 player1.setTurnIndicator(false);        //removes turnIndicator from player1
-                System.out.println("Player1 has earned " + board.getThrowResult());
+                //System.out.println("Player1 has earned " + board.getThrowResult());
                 if(board.isExtraTurn()){        //checks if player1 has an extra turn
                     player1.setTurnIndicator(true);
                     System.out.println("Player1 has earned an extra turn!");
@@ -39,9 +39,9 @@ public class main {
             turn = buffer.nextLine();
             board.playTurn();
             if(player2.isTurnIndicator()){          //plays player2's turn
-                player2.setBalance(player2.getBalance() + board.getThrowResult());      //updates balance of player2
+                player2.setBalance(board.getThrowResult());      //updates balance of player2
                 player2.setTurnIndicator(false);        //removes turnIndicator from player2
-                System.out.println("Player2 has earned " + board.getThrowResult());
+                //System.out.println("Player2 has earned " + board.getThrowResult());
                 if(board.isExtraTurn()){        //checks if player2 has an extra turn
                     player2.setTurnIndicator(true);
                     System.out.println("Player2 has earned an extra turn!");
