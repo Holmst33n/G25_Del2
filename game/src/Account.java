@@ -2,14 +2,13 @@
 //  Parts of this code comes from Lewis/Loftus, Java software solutions
 //-----------------------------------------------------------------
 
-package game.scr;
+package game.src;
 
 public class Account {
     private int balance;
 
     //-----------------------------------------------------------------
-    //  Sets up the account by defining its owner, account number,
-    //  and initial balance.
+    //  Sets up the account by defining initial balance.
     //-----------------------------------------------------------------
     public Account () {
         balance = 0;
@@ -19,21 +18,20 @@ public class Account {
     //  Deposits the specified amount into the account. Returns the
     //  new balance.
     //-----------------------------------------------------------------
-    public double deposit (int amount) {
+    public int deposit (int amount) {
 
         if (amount < 1){ // Guard condition to prevent negative deposits
             amount = 0;
-            System.out.println("Error: Not possible to withdraw deposit negative founds");
+            System.out.println("Error: Not possible to deposit negative founds");
         }
         balance = balance + amount;
         return balance;
     }
 
     //-----------------------------------------------------------------
-    //  Withdraws the specified amount from the account and applies
-    //  the fee. Returns the new balance.
+    //  Withdraws the specified amount from the account. Returns the new balance.
     //-----------------------------------------------------------------
-    public double withdraw (int amount) {
+    public int withdraw (int amount) {
 
         if (amount < 1){ // Guard condition to prevent negative deposits
             amount = 0;
@@ -56,7 +54,7 @@ public class Account {
     //-----------------------------------------------------------------
     //  Returns the current balance of the account.
     //-----------------------------------------------------------------
-    public double getBalance () {
+    public int getBalance () {
         return balance;
     }
 
