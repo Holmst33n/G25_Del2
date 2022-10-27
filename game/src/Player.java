@@ -2,11 +2,12 @@ package game.src;
 
 public class Player {
 
-    private int balance = 0;
+    private int balance;
     private boolean turnIndicator;
 
     public Player() {       //constructor
         this.turnIndicator = false;
+        this.balance = 0;
     }
 
     public int getBalance() {
