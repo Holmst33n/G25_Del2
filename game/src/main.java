@@ -10,6 +10,7 @@ public class main {
         player1.setTurnIndicator(true);     //sets turnIndicator of player1 to true
         Scanner buffer = new Scanner(System.in);    //creates a buffer used to press enter to play next turn
         String turn;
+        System.out.println("Welcome to the game! Press Enter to play each turn.");
 
         do{         //this do while loop runs until a player hits 3000
             turn = buffer.nextLine();
