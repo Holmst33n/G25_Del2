@@ -11,7 +11,7 @@ public class Account {
     //  Sets up the account by defining initial balance.
     //-----------------------------------------------------------------
     public Account () {
-        balance = 0;
+        balance = 1000;
     }
 
     //-----------------------------------------------------------------
